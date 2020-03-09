@@ -6,15 +6,15 @@ It interacts with the Docker registry [HTTPS API v2](https://docs.docker.com/reg
 
 ## Download image
 
-### Pull a Docker image
+#### Pull a Docker image
 
 `python pull.py hello-world`
 
-### Pull with specific tag
+#### Pull with specific tag
 
 `python pull.py mysql/mysql-server:8.0`
 
-### Pull from another address
+#### Pull from another address
 
 `python pull.py mcr.microsoft.com/mssql-tools`
 
