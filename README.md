@@ -42,7 +42,7 @@ This script has not above limits. But you **can't** run this on windows
 
 ## Load image
 
-You can load images using `docker load` as follow :
+You can load images using `docker load` like this :
 
 ```bash
 docker load -i <file-name>.tar
