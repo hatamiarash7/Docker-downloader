@@ -1,30 +1,50 @@
 # Docker image downloader
 
-It's a Python scripts for interacting with Docker Hub without needing the Docker client itself.
+There is 2 scripts for interacting with Docker Hub without needing the Docker client itself.
 
 It interacts with the Docker registry [HTTPS API v2](https://docs.docker.com/registry/spec/api/).
 
-## Download image
+---
 
-#### Pull a Docker image
+## Python version
 
-`python pull.py hello-world`
+Example of usage :
 
-#### Pull with specific tag
+```bash
+python pull.py <image-name>:<tag>
 
-`python pull.py mysql/mysql-server:8.0`
 
-#### Pull from another address
+python pull.py hello-world
+python pull.py prom/prometheus:v2.19.2
+python pull.py mcr.microsoft.com/mssql-tools
+```
 
-`python pull.py mcr.microsoft.com/mssql-tools`
+### Limitations
+
+- Only support v2 manifests. Some registries ( like [quay.io](https://quay.io) ) which only uses v1 manifests, may not work.
+- Some big images may fail to unzip during the extract process
+
+---
+
+## Bashe version
+
+This script has not above limits. But you **can't** run this on windows
+
+```bash
+chmod +x pull.sh
+./pull.sh <directory_name> <image-name>:<tag>
+
+
+./pull.sh prometheus prom/prometheus:v2.19.2
+./pull.sh mysql-5.7 mysql:5.7
+```
+
+---
 
 ## Load image
 
 You can load images using `docker load` as follow :
 
-`docker load -i <file-name>.tar`
-
-## Limitations
-
-- Only support v2 manifests. Some registries ( like [quay.io](https://quay.io) ) which only uses v1 manifests, may not work.
-- Some big images may fail to unzip during the extract process
+```bash
+docker load -i <file-name>.tar
+```
