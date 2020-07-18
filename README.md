@@ -8,7 +8,7 @@ It interacts with the Docker registry [HTTPS API v2](https://docs.docker.com/reg
 
 ## Python version
 
-Example of usage :
+Examples :
 
 ```bash
 python pull.py <image-name>:<tag>
@@ -26,7 +26,7 @@ python pull.py mcr.microsoft.com/mssql-tools
 
 ---
 
-## Bashe version
+## Bash version
 
 This script has not above limits. But you **can't** run this on windows
 
