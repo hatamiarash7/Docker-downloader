@@ -31,7 +31,6 @@ python pull.py mcr.microsoft.com/mssql-tools
 This script has not above limits. But you **can't** run this on windows
 
 ```bash
-chmod +x pull.sh
 ./pull.sh <directory_name> <image-name>:<tag>
 
 
